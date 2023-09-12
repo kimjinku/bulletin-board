@@ -61,7 +61,7 @@ public class Main {
                     String newContent = scan.nextLine();
 
                     Article newArticle = new Article(targetId, newTitle, newContent);
-                    articles.set(targetId, newArticle);
+                    articles.set(targetId-1, newArticle);
 
                     System.out.println("수정이 완료되었습니다.");
 
@@ -79,7 +79,9 @@ public class Main {
                 if (article == null) {
                     System.out.println("존재하지 않는 게시물입니다");
                 } else {
-                    articles.remove(targetId);
+                    articles.remove(targetId-1);
+
+
                     System.out.printf("%d번 게시물이 삭제되었습니다.\n", targetId);
 
                 }
@@ -120,9 +122,14 @@ public class Main {
             }
         }
 
+
+
         return target;
 
     }
 
-
 }
+
+
+
+
