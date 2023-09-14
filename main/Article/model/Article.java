@@ -1,27 +1,23 @@
-package main.java;
-
-import java.text.SimpleDateFormat;
+package main.Article.model;
 
 public class Article {
-    private int id;// 게시물 번호 - 무언가를 식별하기위한 데이터를 id로 많이 쓴다.
-
+    // 게시물 번호
+    private int id;
     // 제목
     private String title;
     // 내용
     private String content;
 
+    // 조회수
+    private int hit;
+
     private String regDate;
 
-    private int views;
-
-
     public Article(int id, String title, String content, String regDate) {
+        this.id = id;
         this.title = title;
         this.content = content;
-        this.id = id;
         this.regDate = regDate;
-
-
     }
 
     public String getTitle() {
@@ -56,15 +52,11 @@ public class Article {
         this.regDate = regDate;
     }
 
-    public int getViews() {
-        return views;
+    public int getHit() {
+        return hit;
     }
 
-    public void setViews(int views) {
-        this.views = views;
+    public void setHit(int hit) {
+        this.hit = hit;
     }
 }
-//public  void increaseViews(){
-//    this.views ++;
-// } 웬만하면 클래스 내에서 데이터를 처리하지 않는다.
-
